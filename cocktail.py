@@ -23,6 +23,7 @@ import xbmc
 import sys
 import os
 import urllib
+import threading
 from resources.lib import thecocktaildb
 from resources.lib import ingredient_details
 from resources.lib.common_cocktail import *
@@ -71,7 +72,16 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 				xbmc.sleep(wait_time*1000)
 				
 		next_random = int(addon.getSetting('next-time'))*1000
-		
+
+		#Close Screensaver on Backgroundplay
+		def background():
+			while(True):
+				if xbmc.getCondVisibility("Player.HasMedia"):
+					self.close_screensaver()
+				xbmc.sleep(3)
+		background_play = threading.Thread(name='background', target=background)
+		background_play.start()
+
 		if self.screensaver_mode:
 			self.set_random()
 			self.current_time = 0
