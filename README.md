@@ -1,5 +1,5 @@
-
 # Cocktail
+
 ## Cocktail recipe browser and screensaver for Kodi
 
 ![Screenshot program](https://raw.githubusercontent.com/enen92/script.screensaver.cocktail/master/icon.png)
@@ -9,9 +9,14 @@ It also includes an interactive screensaver to display random drinks, switch dri
 
 Powered by http://www.thecocktaildb.com
 
-* [Forum url](http://forum.kodi.tv/showthread.php?tid=235298)
+- [Forum url](http://forum.kodi.tv/showthread.php?tid=235298)
 
 Textures from script.extendedinfo (by phil)
+
+**m0d by Zapx0fce2**
+
+- Fixed helpscreen "does not go away" error
+- Added the ability that the screensaver can disappear when you send a video via the "play to kodi" addon
 
 # Screenshots
 
